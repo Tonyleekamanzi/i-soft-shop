@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +10,6 @@ body {
   color: #333;
   padding: 1rem;
 }
-
 
 /* //HEADER */
 
@@ -35,11 +33,6 @@ body {
   }
 }
 
-
-
-
-
-
 /* Products grid container */
 .container {
   display: grid;
@@ -55,71 +48,94 @@ body {
 
 @media (min-width: 900px) {
   .container {
-    grid-template-columns: repeat(4,1fr); /* 3 columns on desktops */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktops */
   }
 }
 
-/* Product Card */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin: 3rem 0 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
 .product-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  transition: transform 0.2s;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  transition: 0.3s ease;
+  padding: 1rem;
+  max-width: 300px;
 }
 
 .product-card:hover {
   transform: translateY(-4px);
 }
 
-/* Image section */
 .product-image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .product-image {
-  max-height: 100%;
+  max-height: 200px;
   width: auto;
   object-fit: contain;
 }
 
-/* Info section */
 .product-info {
-  padding: 1rem;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .product-name {
-  font-weight: bold;
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .product-rating {
   font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
+  color: #ffb400;
 }
 
 .product-price {
   font-size: 1.2rem;
-  color: #007bff;
-  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .product-tags {
   font-size: 0.85rem;
-  color: #444;
-  margin-top: auto;
+  color: #666;
 }
 
+.add-chat-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.add-chat-button:hover {
+  background-color: #0056b3;
+}
